@@ -208,7 +208,6 @@ header .logo {
 .nav {
   padding: 2.225rem 0rem;
   background-color: var(--gray);
-  transition: background-color 0.6s;
 }
 
 .nav-list {
@@ -273,8 +272,6 @@ header .logo {
   font-style: italic;
   opacity: 0.75;
   z-index: -1;
-  text-shadow: 0px 3px 0px #000000, 0px 14px 10px rgba(0, 0, 0, 0.1),
-    0px 12px 2px rgba(0, 0, 0, 0.15), 0px 16px 30px rgba(0, 0, 0, 0.2);
 }
 
 .section.gray .section__title {
@@ -322,7 +319,7 @@ header .logo {
 /* For large devices */
 @media screen and (min-width: 1520px) {
   .container {
-    max-width: 1300px;
+    max-width: 1400px;
   }
 }
 /* for X-large */
@@ -352,8 +349,8 @@ span.big {
   transform: translate(0, -50%);
   width: 63%;
   padding: 0.5rem 1.5rem;
-  background-color: var(--accent);
-  color: var(--dark);
+  background-color: var(--gray);
+  color: var(--light);
   font-size: var(--h2-font-size);
   font-weight: 400;
   font-style: italic;
@@ -687,6 +684,9 @@ span.large {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
 }
+textarea.form-control {
+  height: auto;
+}
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     -webkit-transition: none;
@@ -795,6 +795,10 @@ select.form-control:focus::-ms-value {
   min-height: 500px;
 }
 
+body.safari .map {
+  max-height: 500px !important;
+}
+
 /* .contact-info {
   display: flex;
   flex-direction: column;
@@ -871,13 +875,10 @@ select.form-control:focus::-ms-value {
     height: 100%;
     background-color: var(--dark);
     visibility: hidden;
+    transition: background-color 0.6s;
   }
 
   body.overflow .nav {
-    margin: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-color: var(--dark);
     visibility: visible;
     z-index: 20;

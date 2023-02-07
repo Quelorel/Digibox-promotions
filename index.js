@@ -12,19 +12,40 @@ const toggleMobileMenu = function () {
     body.classList.add("overflow");
   }
 };
-
 headerToggle.addEventListener("click", toggleMobileMenu);
 
-function myFunction() {
+const pricingList = document.querySelectorAll(".pricing-list");
+const pricingListHeightArray = [];
+
+function mediaQueryFunction() {
   if (mediaQuery.matches) {
     // If media query matches
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].addEventListener("click", toggleMobileMenu);
     }
   } else {
+    for (let i = 0; i < pricingList.length; i++) {
+      pricingListHeightArray.push(pricingList[i].offsetHeight);
+      console.log(pricingList[i].offsetHeight);
+    }
+    heighestElement = Math.max(...pricingListHeightArray);
+    pricingList.forEach((element) => {
+      element.style.height = heighestElement;
+      console.log(element.offsetHeight);
+    });
   }
 }
 
 const mediaQuery = window.matchMedia("(max-width: 1100px)");
-myFunction(mediaQuery); // Call listener function at run time
-mediaQuery.addListener(myFunction); // Attach listener function on state changes
+mediaQueryFunction(mediaQuery); // Call listener function at run time
+mediaQuery.addListener(mediaQueryFunction); // Attach listener function on state changes
+
+function IsSafari() {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  if (isSafari) {
+    body.classList.add(".safari");
+  }
+}
+
+IsSafari();
