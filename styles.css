@@ -883,7 +883,7 @@ body.safari .map {
   body.overflow .nav.container {
     max-width: 100%;
   }
-  body.overflow .nav-list {
+  .nav-list {
     flex-direction: column;
     position: absolute;
     left: 50%;
@@ -903,29 +903,36 @@ body.safari .map {
     top: 3vh;
     cursor: pointer;
     z-index: 21;
+    width: 40px;
+    height: 60px;
   }
 
   .header-toggle > span {
     display: block;
-    width: 2.125rem;
-    height: 0.1525rem;
+    height: 3px;
+    width: 100%;
     background-color: white;
-    transform-origin: 2.7px 1.8px;
-
-    transition: all 300ms ease-in-out;
+    position: absolute;
+    transition: all 200ms ease-in-out;
+  }
+  .header-toggle > span:nth-child(1) {
+    top: 12px;
+  }
+  .header-toggle > span:nth-child(2) {
+    top: 24px;
+  }
+  .header-toggle > span:nth-child(3) {
+    top: 36px;
   }
 
-  .header-toggle > span:not(:last-child) {
-    margin-bottom: 0.4625rem;
-  }
   .header-toggle.open > span:first-child {
-    transform: rotate(45deg);
+    transform: translateY(12px) rotate(-45deg);
   }
   .header-toggle.open > span:nth-child(2) {
     opacity: 0;
   }
   .header-toggle.open > span:last-child {
-    transform: rotate(-45deg);
+    transform: translateY(-12px) rotate(45deg);
   }
 }
 
