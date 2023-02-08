@@ -1,35 +1,31 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
-
 @font-face {
   font-family: "marionregular";
-  src: url("/font/Marion_Regular/woff2") format("woff2"),
-    url("/font/Marion_Regular/woff") format("woff");
+  src: url("font/Marion_Regular/marion_regular-webfont.woff2") format("woff2"),
+    url("font/Marion_Regular/marion_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "pp_hattonbold";
-  src: url("/font/Hatton/pp_hatton_bold_700-webfont.woff2") format("woff2"),
-    url("/font/Hatton/pp_hatton_bold_700-webfont.woff") format("woff");
+  src: url("font/Hatton/pp_hatton_bold_700-webfont.woff2") format("woff2"),
+    url("font/Hatton/pp_hatton_bold_700-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "pp_hattonmedium";
-  src: url("/font/Hatton/pp_hatton_medium_500-webfont.woff2") format("woff2"),
-    url("/font/Hatton/pp_hatton_medium_500-webfont.woff") format("woff");
+  src: url("font/Hatton/pp_hatton_medium_500-webfont.woff2") format("woff2"),
+    url("font/Hatton/pp_hatton_medium_500-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "pp_hattonultralight";
-  src: url("/font/Hatton/pp_hatton_ultralight_200-webfont.woff2")
-      format("woff2"),
-    url("/font/Hatton/pp_hatton_ultralight_200-webfont.woff") format("woff");
+  src: url("font/Hatton/pp_hatton_ultralight_200-webfont.woff2") format("woff2"),
+    url("font/Hatton/pp_hatton_ultralight_200-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
