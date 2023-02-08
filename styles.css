@@ -931,5 +931,5 @@ body.safari .map {
 
 .contact-form button.button.button--flex {
   background-color: rgb(239, 239, 239) !important;
-  color: white !important;
+  color: var(--dark) !important;
 }

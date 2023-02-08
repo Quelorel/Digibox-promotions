@@ -27,12 +27,15 @@ function mediaQueryFunction() {
     }
   } else {
   }
+}
+
+function heightAdjustment() {
   for (let i = 0; i < pricingList.length; i++) {
     pricingListHeightArray.push(pricingList[i].offsetHeight);
   }
   heighestElement = Math.max(...pricingListHeightArray);
   pricingList.forEach((element) => {
-    element.style.height = heighestElement;
+    element.style.height = heighestElement + 40;
   });
 
   for (let i = 0; i < pricingTitle.length; i++) {
@@ -46,6 +49,7 @@ function mediaQueryFunction() {
 
 const heightAdjust = function () {
   mediaQueryFunction();
+  heightAdjustment();
 };
 
 addEventListener("resize", heightAdjust);
@@ -63,3 +67,6 @@ function IsSafari() {
 }
 
 IsSafari();
+heightAdjustment();
+
+window.addEventListener("load", heightAdjustment);
