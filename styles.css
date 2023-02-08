@@ -217,10 +217,11 @@ header .logo {
 
 .nav-list .nav-item a {
   color: var(--light);
+  font-size: 1.3rem;
 }
 
 .nav-list li:not(:first-child) {
-  margin-left: var(--m-2-5);
+  margin-left: var(--m-3);
 }
 
 .hero-section {
@@ -451,13 +452,15 @@ span.big {
   padding: 0.2rem 2.5rem 0.2rem 1rem;
   background-color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1rem;
-  font-size: var(--h2-font-size);
-  font-style: italic;
-  font-weight: 600;
-  color: var(--dark);
   letter-spacing: 1.6;
   border-radius: 0.25rem;
   opacity: 0.9;
+}
+.section__description .list .list-item a {
+  color: var(--dark);
+  font-size: var(--h2-font-size);
+  font-style: italic;
+  font-weight: 600;
 }
 
 .section.gray .flex-container {
@@ -626,19 +629,17 @@ span.large {
   list-style-position: outside;
 }
 
-@media screen and (max-width: 1500px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media screen and (max-width: 1100px) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
   .hidden-title {
     display: none;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -901,7 +902,7 @@ body.safari .map {
   }
 
   .header-toggle {
-    position: absolute;
+    position: fixed;
     right: 3vh;
     top: 3vh;
     cursor: pointer;
@@ -912,7 +913,7 @@ body.safari .map {
     display: block;
     width: 2.125rem;
     height: 0.1525rem;
-    background-color: var(--light);
+    background-color: white;
     transform-origin: 2.7px 1.8px;
 
     transition: all 300ms ease-in-out;
@@ -930,4 +931,9 @@ body.safari .map {
   .header-toggle.open > span:last-child {
     transform: rotate(-45deg);
   }
+}
+
+.contact-form button.button.button--flex {
+  background-color: rgb(239, 239, 239) !important;
+  color: white !important;
 }
