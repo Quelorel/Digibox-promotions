@@ -360,7 +360,7 @@ span.big {
   width: 45%;
 }
 
-#about .button {
+#onama .button {
   position: absolute;
   top: 70%;
 }
@@ -423,7 +423,7 @@ span.big {
     bottom: 0;
   }
 
-  #about .button {
+  #onama .button {
     position: relative;
     top: 0;
     order: 3;
