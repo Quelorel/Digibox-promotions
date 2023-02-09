@@ -20,7 +20,7 @@ const pricingTitle = document.querySelectorAll(".pricing-title");
 const pricingTitleHeightArray = [];
 
 function mediaQueryFunction() {
-  if (mediaQuery.matches) {
+  if (mediaQueryBig.matches) {
     // If media query matches
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].addEventListener("click", toggleMobileMenu);
@@ -29,22 +29,26 @@ function mediaQueryFunction() {
   }
 }
 
-function heightAdjustment() {
-  for (let i = 0; i < pricingList.length; i++) {
-    pricingListHeightArray.push(pricingList[i].offsetHeight);
-  }
-  heighestElement = Math.max(...pricingListHeightArray);
-  pricingList.forEach((element) => {
-    element.style.height = heighestElement + 40;
-  });
+const mediaQuerySmall = window.matchMedia("(max-width: 600px)");
 
-  for (let i = 0; i < pricingTitle.length; i++) {
-    pricingTitleHeightArray.push(pricingTitle[i].offsetHeight);
+function heightAdjustment() {
+  if (!mediaQuerySmall.matches) {
+    for (let i = 0; i < pricingList.length; i++) {
+      pricingListHeightArray.push(pricingList[i].offsetHeight);
+    }
+    heighestElement = Math.max(...pricingListHeightArray);
+    pricingList.forEach((element) => {
+      element.style.height = heighestElement + 40;
+    });
+
+    for (let i = 0; i < pricingTitle.length; i++) {
+      pricingTitleHeightArray.push(pricingTitle[i].offsetHeight);
+    }
+    heighestTitle = Math.max(...pricingTitleHeightArray);
+    pricingTitle.forEach((element) => {
+      element.style.height = heighestTitle;
+    });
   }
-  heighestTitle = Math.max(...pricingTitleHeightArray);
-  pricingTitle.forEach((element) => {
-    element.style.height = heighestTitle;
-  });
 }
 
 const heightAdjust = function () {
@@ -54,9 +58,9 @@ const heightAdjust = function () {
 
 addEventListener("resize", heightAdjust);
 
-const mediaQuery = window.matchMedia("(max-width: 1100px)");
-mediaQueryFunction(mediaQuery); // Call listener function at run time
-mediaQuery.addListener(mediaQueryFunction); // Attach listener function on state changes
+const mediaQueryBig = window.matchMedia("(max-width: 1100px)");
+mediaQueryFunction(mediaQueryBig); // Call listener function at run time
+mediaQueryBig.addListener(mediaQueryFunction); // Attach listener function on state changes
 
 function IsSafari() {
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
