@@ -66,7 +66,7 @@ function IsSafari() {
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   if (isSafari) {
-    body.classList.add(".safari");
+    body.classList.add("safari");
   }
 }
 

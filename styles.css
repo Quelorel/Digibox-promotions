@@ -668,7 +668,7 @@ span.large {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #eeebeb;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -818,7 +818,7 @@ body.safari .map {
 
 .contact-info--list-item a {
   font-size: var(--h2-font-size);
-  color: var(--light);
+  color: var(--gray);
   display: flex;
   align-items: center;
 }
