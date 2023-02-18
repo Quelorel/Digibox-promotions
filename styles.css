@@ -782,6 +782,12 @@ select.form-control:focus::-ms-value {
 
 /* LOCATION */
 
+@media screen and (min-width: 1100px) {
+  #kontakt {
+    padding: 5rem 0;
+  }
+}
+
 .map,
 .contact-info {
   width: 50%;
@@ -795,12 +801,6 @@ select.form-control:focus::-ms-value {
 body.safari .map {
   max-height: 500px !important;
 }
-
-/* .contact-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 .contact-info--list {
   width: 100%;
